@@ -142,10 +142,7 @@ class SettingsSeeder extends Seeder
         ];
 
         foreach ($settings as $row) {
-            Setting::query()->updateOrCreate(
-                ['group' => $row['group'], 'key' => $row['key']],
-                ['value' => $row['value'], 'type' => $row['type']]
-            );
+            Setting::set($row['key'], $row['value'], $row['group'], $row['type']);
         }
     }
 }
