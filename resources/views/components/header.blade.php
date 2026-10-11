@@ -20,7 +20,7 @@
         'url' => route('packages.index', $key),
         'key' => $key,
     ])->values();
-    $desktopNav = $menuNav->whereIn('key', ['buffets', 'fingerfood', 'fruehstueck', 'grillcatering'])->values()->all();
+    $desktopNav = $menuNav->whereIn('key', ['buffets', 'fingerfood', 'fruehstueck', 'grillcatering', 'vegetarisch', 'vegan'])->values()->all();
     $mobileNav = $menuNav->map(fn (array $item) => [
         'label' => $item['label'],
         'url' => $item['url'],
@@ -80,12 +80,12 @@
 </header>
 
 <style>
-.site-header-nav { justify-content: center; gap: 2.2rem; }
+.site-header-nav { justify-content: center; gap: 1.15rem; flex-wrap: nowrap; }
 .site-header-nav a {
     padding: .35rem 0;
     font-size: .78rem;
     font-weight: 600;
-    letter-spacing: .14em;
+    letter-spacing: .1em;
     text-transform: uppercase;
     color: #3a3a3a;
 }
