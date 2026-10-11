@@ -37,6 +37,8 @@ class SecurityHeaders
         $script = [
             "'self'",
             "'unsafe-inline'",
+            // Alpine evaluates x-data and @click with new Function().
+            "'unsafe-eval'",
             'https://js.stripe.com',
             'https://www.paypal.com',
             'https://www.sandbox.paypal.com',
@@ -64,7 +66,7 @@ class SecurityHeaders
 
         if (app()->environment('local')) {
             $vite = ['http://127.0.0.1:5173', 'http://localhost:5173'];
-            $script = array_merge($script, $vite, ["'unsafe-eval'"]);
+            $script = array_merge($script, $vite);
             $connect = array_merge($connect, $vite, [
                 'ws://127.0.0.1:5173',
                 'ws://localhost:5173',
