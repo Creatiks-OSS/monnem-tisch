@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2000" viewBox="0 0 1600 2000" role="img" aria-label="Velora Catering Tafel">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3a2a1d"/>
+      <stop offset="40%" stop-color="#2a1d14"/>
+      <stop offset="100%" stop-color="#1a120c"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="58%" cy="28%" r="55%">
+      <stop offset="0%" stop-color="#e8c99a" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#c4a574" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1a120c" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="linen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4efe6"/>
+      <stop offset="100%" stop-color="#e2d8c8"/>
+    </linearGradient>
+    <linearGradient id="plateg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#faf7f1"/>
+      <stop offset="100%" stop-color="#d9cfc0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="2000" fill="url(#wood)"/>
+  <rect width="1600" height="2000" fill="url(#lamp)"/>
+  <ellipse cx="980" cy="920" rx="620" ry="780" fill="#1f1610" opacity="0.45"/>
+  <path d="M180 220 H1420 V1780 H180 Z" fill="url(#linen)" opacity="0.16"/>
+  <ellipse cx="820" cy="980" rx="430" ry="390" fill="url(#plateg)"/>
+  <ellipse cx="820" cy="980" rx="360" ry="325" fill="none" stroke="#c4a574" stroke-width="6" opacity="0.55"/>
+  <ellipse cx="820" cy="980" rx="250" ry="220" fill="#2c241c"/>
+  <ellipse cx="790" cy="940" rx="120" ry="70" fill="#8b3a2a" opacity="0.85"/>
+  <ellipse cx="880" cy="1000" rx="90" ry="55" fill="#5c6b3d" opacity="0.8"/>
+  <ellipse cx="740" cy="1040" rx="70" ry="42" fill="#c4a574" opacity="0.7"/>
+  <path d="M1080 520 L1280 430" stroke="#c4a574" stroke-width="8" stroke-linecap="round" opacity="0.7"/>
+  <path d="M1120 560 L1340 490" stroke="#ddc49a" stroke-width="5" stroke-linecap="round" opacity="0.55"/>
+  <ellipse cx="430" cy="620" rx="70" ry="90" fill="#faf7f1" opacity="0.35"/>
+  <ellipse cx="430" cy="600" rx="42" ry="58" fill="none" stroke="#c4a574" stroke-width="4" opacity="0.5"/>
+  <ellipse cx="1180" cy="1280" rx="90" ry="70" fill="#3d2a1c" opacity="0.8"/>
+  <ellipse cx="1180" cy="1270" rx="55" ry="28" fill="#c4a574" opacity="0.35"/>
+  <rect x="240" y="1500" width="220" height="12" rx="6" fill="#c4a574" opacity="0.35"/>
+  <rect x="260" y="1530" width="160" height="8" rx="4" fill="#ddc49a" opacity="0.25"/>
+</svg>
