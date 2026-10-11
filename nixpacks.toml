@@ -1,15 +1,11 @@
 # Laravel 12 — Nixpacks (Coolify / Railway)
-# PHP sürümü composer.json içindeki "^8.2" kısıtından okunur.
-# Doküman kökü public/; istekler index.php üzerinden gider.
 
 [variables]
 NIXPACKS_NODE_VERSION = "22"
 NIXPACKS_PHP_ROOT_DIR = "/app/public"
-NIXPACKS_PHP_FALLBACK_PATH = "/index.php"
 
 [phases.install]
 cmds = [
-  "mkdir -p /var/log/nginx /var/cache/nginx",
   "composer install --no-dev --optimize-autoloader --no-interaction --ignore-platform-reqs",
   "npm ci",
 ]
@@ -18,4 +14,4 @@ cmds = [
 cmds = ["npm run build"]
 
 [start]
-cmd = "php artisan storage:link --force && php artisan migrate --force && php artisan config:cache && php artisan view:cache && node /assets/scripts/prestart.mjs /assets/nginx.template.conf /nginx.conf && (php-fpm -y /assets/php-fpm.conf & nginx -c /nginx.conf)"
+cmd = "php artisan storage:link --force && php artisan migrate --force && php artisan config:cache && php artisan view:cache && php artisan serve --host=0.0.0.0 --port=80"
