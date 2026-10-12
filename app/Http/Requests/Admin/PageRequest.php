@@ -23,7 +23,7 @@ class PageRequest extends FormRequest
             'template' => ['nullable', 'string', 'max:100'],
             'content' => ['nullable', 'string'],
             'excerpt' => ['nullable', 'string'],
-            'featured_image' => ['nullable', 'image', 'max:5120'],
+            'featured_image' => ['nullable', 'image', 'max:15360'],
             'is_published' => ['sometimes', 'boolean'],
             'published_at' => ['nullable', 'date'],
             'sort_order' => ['nullable', 'integer', 'min:0'],

@@ -77,7 +77,7 @@ class GalleryController extends Controller
     {
         $request->validate([
             'images' => ['required', 'array'],
-            'images.*' => ['image', 'max:5120'],
+            'images.*' => ['image', 'max:15360'],
             'title' => ['nullable', 'string', 'max:255'],
         ]);
 
@@ -113,7 +113,7 @@ class GalleryController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'slug' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
-            'cover_image' => ['nullable', 'image', 'max:5120'],
+            'cover_image' => ['nullable', 'image', 'max:15360'],
             'category' => ['nullable', 'string', 'max:100'],
             'is_active' => ['sometimes', 'boolean'],
             'sort_order' => ['nullable', 'integer', 'min:0'],

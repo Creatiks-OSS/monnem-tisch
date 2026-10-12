@@ -44,6 +44,7 @@ return [
         'array' => ':attribute en az :value öğe içermelidir.',
     ],
     'image' => ':attribute bir görsel olmalıdır.',
+    'uploaded' => ':attribute yüklenemedi. Dosya çok büyük olabilir.',
     'in' => 'Seçilen :attribute geçersiz.',
     'integer' => ':attribute bir tam sayı olmalıdır.',
     'ip' => ':attribute geçerli bir IP adresi olmalıdır.',

@@ -99,6 +99,7 @@ return [
     'string' => ':attribute muss ein Text sein.',
     'timezone' => ':attribute muss eine gültige Zeitzone sein.',
     'unique' => ':attribute ist bereits vergeben.',
+    'uploaded' => ':attribute konnte nicht hochgeladen werden. Die Datei ist möglicherweise zu groß.',
     'url' => ':attribute muss eine gültige URL sein.',
     'uuid' => ':attribute muss eine gültige UUID sein.',
 

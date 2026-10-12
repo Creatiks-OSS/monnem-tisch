@@ -184,7 +184,7 @@ class SettingController extends Controller
 
         if ($group === 'general') {
             $request->validate([
-                'logo' => ['nullable', 'file', 'max:4096', 'mimes:jpg,jpeg,png,webp,svg,gif'],
+                'logo' => ['nullable', 'file', 'max:15360', 'mimes:jpg,jpeg,png,webp,svg,gif'],
                 'remove_logo' => ['sometimes', 'boolean'],
             ]);
 

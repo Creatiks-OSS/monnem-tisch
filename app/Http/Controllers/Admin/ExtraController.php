@@ -80,7 +80,7 @@ class ExtraController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'slug' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
-            'image' => ['nullable', 'image', 'max:5120'],
+            'image' => ['nullable', 'image', 'max:15360'],
             'price' => ['required', 'numeric', 'min:0'],
             'price_type' => ['nullable', 'in:stück,person,fixed,hour'],
             'minimum_quantity' => ['nullable', 'integer', 'min:1'],

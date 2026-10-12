@@ -37,7 +37,7 @@ class HomepageSettingController extends Controller
             'text' => ['required', 'array'],
             'text.*' => ['nullable', 'string', 'max:5000'],
             'images' => ['nullable', 'array'],
-            'images.*' => ['nullable', 'file', 'max:8192', 'mimes:jpg,jpeg,png,webp'],
+            'images.*' => ['nullable', 'file', 'max:15360', 'mimes:jpg,jpeg,png,webp'],
             'remove_image' => ['nullable', 'array'],
         ]);
 

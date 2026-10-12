@@ -109,7 +109,7 @@ class PackageController extends Controller
             'subtitle' => ['nullable', 'string', 'max:255'],
             'description' => ['nullable', 'string'],
             'seo_text' => ['nullable', 'string', 'max:20000'],
-            'image' => ['nullable', 'image', 'max:5120'],
+            'image' => ['nullable', 'image', 'max:15360'],
             'base_price' => ['nullable', 'numeric', 'min:0'],
             'price_per_person' => ['nullable', 'numeric', 'min:0'],
             'compare_price' => ['nullable', 'numeric', 'min:0'],

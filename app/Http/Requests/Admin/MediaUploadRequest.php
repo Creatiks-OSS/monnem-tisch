@@ -14,7 +14,7 @@ class MediaUploadRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'file' => ['required', 'file', 'mimes:jpeg,jpg,png,webp,avif', 'max:5120'],
+            'file' => ['required', 'file', 'mimes:jpeg,jpg,png,webp,avif', 'max:15360'],
             'folder' => ['nullable', 'string', 'max:100', 'regex:/^[a-zA-Z0-9_\\-\\/]+$/'],
             'alt' => ['nullable', 'string', 'max:255'],
             'title' => ['nullable', 'string', 'max:255'],

@@ -84,7 +84,7 @@ class CityController extends Controller
             'content' => ['nullable', 'string'],
             'delivery_price' => ['nullable', 'numeric', 'min:0'],
             'delivery_radius' => ['nullable', 'numeric', 'min:0'],
-            'image' => ['nullable', 'image', 'max:5120'],
+            'image' => ['nullable', 'image', 'max:15360'],
             'is_active' => ['sometimes', 'boolean'],
         ]);
         unset($data['image']);

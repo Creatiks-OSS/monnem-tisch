@@ -22,7 +22,7 @@ class CategoryRequest extends FormRequest
             'slug' => ['nullable', 'string', 'max:255', Rule::unique('product_categories', 'slug')->ignore($categoryId)],
             'short_description' => ['nullable', 'string', 'max:500'],
             'description' => ['nullable', 'string'],
-            'image' => ['nullable', 'image', 'max:5120'],
+            'image' => ['nullable', 'image', 'max:15360'],
             'icon' => ['nullable', 'string', 'max:100'],
             'starting_price' => ['nullable', 'numeric', 'min:0'],
             'is_featured' => ['sometimes', 'boolean'],
