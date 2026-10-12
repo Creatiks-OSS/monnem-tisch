@@ -14,4 +14,4 @@ cmds = [
 cmds = ["npm run build"]
 
 [start]
-cmd = 'export PHP_INI_SCAN_DIR=":/app/deploy/php" && php artisan storage:link --force && php artisan migrate --no-interaction --force && php artisan config:cache && php artisan view:cache && php artisan serve --host=0.0.0.0 --port=80'
+cmd = "php artisan storage:link --force && php artisan migrate --no-interaction --force && php artisan config:cache && php artisan view:cache && cd public && exec php -d upload_max_filesize=20M -d post_max_size=64M -d memory_limit=256M -S 0.0.0.0:80 ../deploy/server.php"
