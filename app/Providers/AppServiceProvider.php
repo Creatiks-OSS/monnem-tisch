@@ -70,6 +70,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        $logDir = storage_path('logs');
+        if (! is_dir($logDir)) {
+            @mkdir($logDir, 0775, true);
+        }
+        if (! is_writable($logDir)) {
+            Config::set('logging.default', 'errorlog');
+        }
+
         app()->setLocale(config('app.locale', 'de'));
 
         Password::defaults(function () {

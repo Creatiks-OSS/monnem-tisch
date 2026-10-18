@@ -1,0 +1,20 @@
+DirectoryIndex index.php
+
+<IfModule mod_rewrite.c>
+    Options -Indexes
+    RewriteEngine On
+
+    # Keep https://monnemtisch.de/public out of the address bar.
+    RewriteCond %{THE_REQUEST} \s/+public(?:/|\s|\?) [NC]
+    RewriteRule ^public/?(.*)$ /$1 [R=301,L]
+
+    RewriteRule ^(app|bootstrap|config|database|resources|routes|storage|vendor|node_modules|tests|deploy)(/|$) - [F,L]
+    RewriteRule ^(\.env.*|composer\.(json|lock)|package(-lock)?\.json|artisan|vite\.config\.js|phpunit\.xml)$ - [F,L]
+
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+    RewriteCond %{DOCUMENT_ROOT}/public%{REQUEST_URI} -f
+    RewriteRule ^ public%{REQUEST_URI} [L]
+
+    RewriteCond %{REQUEST_URI} !^/index\.php$
+    RewriteRule ^ index.php [L]
+</IfModule>

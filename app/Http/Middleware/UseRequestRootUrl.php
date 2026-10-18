@@ -15,7 +15,10 @@ class UseRequestRootUrl
             URL::forceScheme('https');
         }
 
-        $root = $request->root();
+        $root = rtrim($request->root(), '/');
+        if (str_ends_with($root, '/public')) {
+            $root = substr($root, 0, -strlen('/public'));
+        }
         if ($root !== '') {
             URL::forceRootUrl($root);
         }
